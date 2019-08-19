@@ -38,7 +38,14 @@ class ExampleInstrumentedTest {
     @Test
     fun onApplicationLoadGetDataFromServer() {
         val showProgressObserver = mock<Observer<List<Work>>>()
-        viewModel.getProfilesListLiveData().observeForever(showProgressObserver)
+        viewModel.getProfilesLiveDataWorkSummery().observeForever(showProgressObserver)
+        verify(showProgressObserver)
+    }
+
+    @Test
+    fun onApplicationLoadGetProfileDataFromServer() {
+        val showProgressObserver = mock<Observer<String>>()
+        viewModel.getProfilesLiveDataName().observeForever(showProgressObserver)
         verify(showProgressObserver)
     }
 

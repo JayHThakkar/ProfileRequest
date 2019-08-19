@@ -60,8 +60,4 @@ class ProfileAdapter : RecyclerView.Adapter<ProfileAdapter.ViewHolder>() {
         val mEndDate: TextView = itemView.findViewById(R.id.endDate)
         val mRole: TextView = itemView.findViewById(R.id.role)
     }
-
-    /*interface OnPhotoClickListener {
-        fun onPhotoClicked(workDetails: work)
-    }*/
 }
