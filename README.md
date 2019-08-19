@@ -16,13 +16,19 @@ The app has following packages:
 4 ) home: contains adapter, activity and viewmodel of Home page
 
    Library reference resources:
-   1 Used Latest Androidx Components like
-   2 androidx.constraintlayout:constraintlayout:1.1.3
-   3 androidx.recyclerview:recyclerview:1.0.0
-   4 androidx.cardview:cardview:1.0.0
+   
+ 1 ) Used Latest Androidx Components like
+ 
+ 2 ) androidx.constraintlayout:constraintlayout:1.1.3
+ 
+ 3 ) androidx.recyclerview:recyclerview:1.0.0
+ 
+ 4 ) androidx.cardview:cardview:1.0.0
+ 
+ 5 ) io.reactivex.rxjava2
 
-   RxJava
-   io.reactivex.rxjava2
-
-   DI
-   1 Dagger2
+ 6 ) Dagger2
+ 
+ 7 ) retrofit2
+ 
+ 8 ) mockito
