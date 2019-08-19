@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="8dp">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+        <TextView
+                android:id="@+id/company"
+                android:hint="Company"
+                android:paddingLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginBottom="2dp"/>
+
+        <TextView
+                android:id="@+id/position"
+                android:paddingLeft="10dp"
+                android:hint="Position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/company"/>
+        <TextView
+                android:id="@+id/startDate"
+                android:paddingLeft="10dp"
+                android:hint="StartDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/position"/>
+        <TextView
+                android:id="@+id/endDate"
+                android:paddingLeft="10dp"
+                android:hint="EndDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/startDate"/>
+        <TextView
+                android:id="@+id/role"
+                android:paddingLeft="10dp"
+                android:hint="Role"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/endDate"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

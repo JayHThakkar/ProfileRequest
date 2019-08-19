@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+            android:id="@+id/tvPersonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Name"
+            android:textSize="28sp"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            tools:ignore="MissingConstraints"/>
+
+    <TextView
+            android:id="@+id/tvPersonEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvPersonName"
+            android:textSize="20sp"
+            tools:text="Email"
+            android:layout_marginStart="12dp" android:layout_marginLeft="12dp" tools:ignore="MissingConstraints"/>
+
+    <TextView
+            android:id="@+id/tvPersonPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvPersonEmail"
+            android:textSize="20sp"
+            tools:text="Phone"
+            android:layout_marginStart="12dp" android:layout_marginLeft="12dp" tools:ignore="MissingConstraints"/>
+
+    <TextView
+            android:id="@+id/tvPersonSummery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvPersonPhone"
+            android:textSize="20sp"
+            tools:text="Summery"
+            android:layout_marginStart="12dp" android:layout_marginLeft="12dp" tools:ignore="MissingConstraints"/>
+
+    <TextView
+            android:id="@+id/tvPersonSkillSet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvPersonSummery"
+            android:textSize="20sp"
+            tools:text="Technical Skill set"
+            android:layout_marginStart="12dp" android:layout_marginLeft="12dp" tools:ignore="MissingConstraints"/>
+
+    <TextView
+            android:id="@+id/tvPersonWorkDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvPersonSkillSet"
+            android:textSize="20sp"
+            tools:text="Experiance Summery"
+            android:layout_marginStart="12dp" android:layout_marginLeft="12dp" tools:ignore="MissingConstraints"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:orientation="vertical"
+            android:layout_below="@+id/tvPersonWorkDetails"
+            android:scrollbars="vertical"/>
+
+</RelativeLayout>
