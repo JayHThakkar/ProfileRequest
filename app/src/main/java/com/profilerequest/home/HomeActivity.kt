@@ -23,7 +23,6 @@ class HomeActivity : DaggerAppCompatActivity(){
 
         initRecyclerView()
         viewModel = ViewModelProviders.of(this, viewModelFactory).get(HomeViewModel::class.java)
-        observeViewModelProfile()
         observeViewModel()
     }
 
@@ -38,20 +37,9 @@ class HomeActivity : DaggerAppCompatActivity(){
     }
 
     private fun observeViewModel() {
-        viewModel.getProfilesListWorkData().observe(this@HomeActivity, Observer { profiles ->
-            if (profiles == null) return@Observer
-            profileAdapter.setProfileDetails(profiles)
-        })
-    }
-
-    private fun observeViewModelProfile() {
         viewModel.getProfilesListLiveData().observe(this@HomeActivity, Observer { profiles ->
             if (profiles == null) return@Observer
-            tvPersonName.text = profiles
-            tvPersonEmail.text = profiles
-            tvPersonPhone.text = profiles
-            tvPersonSummery.text = profiles
-            tvPersonSkillSet.text = profiles
+            profileAdapter.setProfileDetails(profiles)
         })
     }
 }
