@@ -12,12 +12,4 @@ interface ProfileApi {
 
     @GET(".")
     fun getRecent(): Single<RecentProfileResponse>
-
-   /* @GET("rest/?method=flickr.photos.search&api_key=$API_KEY" +
-            "&extras=owner_name,icon_server,icon_farm&format=json&nojsoncallback=1")
-    fun search(
-        @Query("tags") query: String,
-        @Query("per_page") perPage: Int = 50): Single<RecentProfileResponse>*/
 }
-
-//https://api.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=6bf318919bbbc455f3573d18798a58e3&extras=owner_name,icon_server,icon_farm&format=json&nojsoncallback=1&per_page=50
