@@ -77,8 +77,8 @@ class ExampleUnitTest {
 
     @Test
     fun onApplicationLoadGetProfilesLiveDataWorkSummery() {
-        val showProgressObserver = mock<Observer<List<Work>>>()
-        viewModel.getProfilesLiveDataWorkSummery().observeForever(showProgressObserver)
+        val showProgressObserver = mock<List<Work>>()
+        viewModel.getProfilesLiveDataWorkSummery()
         viewModel.getCandidateCompanyData()
         verify(showProgressObserver)
     }
