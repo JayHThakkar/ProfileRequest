@@ -12,12 +12,12 @@ import javax.inject.Inject
 
 class HomeViewModel @Inject constructor(private val repository: ProfileRepository) : ViewModel() {
 
-    private val profilesLiveDataWorkSummery = MutableLiveData<List<Work>>()
-    private val profilesLiveDataName = MutableLiveData<String>()
-    private val profilesLiveDataEmail = MutableLiveData<String>()
-    private val profilesLiveDataPhone = MutableLiveData<String>()
-    private val profilesLiveDataSummery = MutableLiveData<String>()
-    private val profilesLiveDataSkill = MutableLiveData<String>()
+     private val profilesLiveDataWorkSummery = MutableLiveData<List<Work>>()
+     private val profilesLiveDataName = MutableLiveData<String>()
+     private val profilesLiveDataEmail = MutableLiveData<String>()
+     private val profilesLiveDataPhone = MutableLiveData<String>()
+     private val profilesLiveDataSummery = MutableLiveData<String>()
+     private val profilesLiveDataSkill = MutableLiveData<String>()
 
     private val compositeDisposable: CompositeDisposable = CompositeDisposable()
 
@@ -30,7 +30,7 @@ class HomeViewModel @Inject constructor(private val repository: ProfileRepositor
         getCandidateTechnicalSkill()
     }
 
-    private fun getCandidateCompanyData() {
+     fun getCandidateCompanyData() {
         repository.getProfile()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
@@ -41,7 +41,7 @@ class HomeViewModel @Inject constructor(private val repository: ProfileRepositor
             .let { compositeDisposable.add(it) }
     }
 
-    private fun getCandidateName() {
+     fun getCandidateName() {
         repository.getProfile()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
@@ -49,7 +49,7 @@ class HomeViewModel @Inject constructor(private val repository: ProfileRepositor
             .let { compositeDisposable.add(it) }
     }
 
-    private fun getCandidateEmail() {
+     fun getCandidateEmail() {
         repository.getProfile()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
@@ -57,7 +57,7 @@ class HomeViewModel @Inject constructor(private val repository: ProfileRepositor
             .let { compositeDisposable.add(it) }
     }
 
-    private fun getCandidatePhone() {
+     fun getCandidatePhone() {
         repository.getProfile()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
@@ -65,7 +65,7 @@ class HomeViewModel @Inject constructor(private val repository: ProfileRepositor
             .let { compositeDisposable.add(it) }
     }
 
-    private fun getCandidateSummery() {
+     fun getCandidateSummery() {
         repository.getProfile()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
