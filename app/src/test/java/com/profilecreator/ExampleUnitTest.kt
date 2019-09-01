@@ -36,16 +36,50 @@ class ExampleUnitTest {
     }
 
     @Test
-    fun onApplicationLoadGetDataFromServer() {
-        val showProgressObserver = mock<Observer<List<Work>>>()
-        viewModel.getProfilesLiveDataWorkSummery().observeForever(showProgressObserver)
+    fun onApplicationLoadGetProfilesLiveDataName() {
+        val showProgressObserver = mock<Observer<String>>()
+        viewModel.getProfilesLiveDataName().observeForever(showProgressObserver)
+        viewModel.getCandidateName()
         verify(showProgressObserver)
     }
 
     @Test
-    fun onApplicationLoadGetProfileDataFromServer() {
+    fun onApplicationLoadGetCandidateEmail() {
         val showProgressObserver = mock<Observer<String>>()
-        viewModel.getProfilesLiveDataName().observeForever(showProgressObserver)
+        viewModel.getProfilesLiveDataEmail().observeForever(showProgressObserver)
+        viewModel.getCandidateEmail()
+        verify(showProgressObserver)
+    }
+
+    @Test
+    fun onApplicationLoadGetProfilesLiveDataPhone() {
+        val showProgressObserver = mock<Observer<String>>()
+        viewModel.getProfilesLiveDataPhone().observeForever(showProgressObserver)
+        viewModel.getCandidatePhone()
+        verify(showProgressObserver)
+    }
+
+    @Test
+    fun onApplicationLoadGetProfilesLiveDataSummery() {
+        val showProgressObserver = mock<Observer<String>>()
+        viewModel.getProfilesLiveDataSummery().observeForever(showProgressObserver)
+        viewModel.getCandidateSummery()
+        verify(showProgressObserver)
+    }
+
+    @Test
+    fun onApplicationLoadGetCandidateTechnicalSkill() {
+        val showProgressObserver = mock<Observer<String>>()
+        viewModel.getProfilesLiveDataSkill().observeForever(showProgressObserver)
+        viewModel.getCandidateTechnicalSkill()
+        verify(showProgressObserver)
+    }
+
+    @Test
+    fun onApplicationLoadGetProfilesLiveDataWorkSummery() {
+        val showProgressObserver = mock<Observer<List<Work>>>()
+        viewModel.getProfilesLiveDataWorkSummery().observeForever(showProgressObserver)
+        viewModel.getCandidateCompanyData()
         verify(showProgressObserver)
     }
 

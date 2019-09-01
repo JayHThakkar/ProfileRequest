@@ -73,7 +73,7 @@ class HomeViewModel @Inject constructor(private val repository: ProfileRepositor
             .let { compositeDisposable.add(it) }
     }
 
-    private fun getCandidateTechnicalSkill() {
+    fun getCandidateTechnicalSkill() {
         repository.getProfile()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
